@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Nova Locação</h2>
+<form method="post">
+  {% csrf_token %}
+  <label>Cliente ID</label><br><input name="cliente_id" required><br>
+  <label>Veículo ID</label><br>
+  <select name="veiculo_id">
+    {% for v in veiculos %}
+      <option value="{{ v.id }}">{{ v }}</option>
+    {% endfor %}
+  </select><br>
+  <label>Data prevista</label><br><input type="datetime-local" name="data_prevista"><br><br>
+  <button type="submit">Criar</button>
+</form>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Veículo: {{ veiculo.modelo }}</h2>
+<p>Placa: {{ veiculo.placa }}</p>
+<p>Marca: {{ veiculo.marca }}</p>
+<p>Status: {{ veiculo.status }}</p>
+{% if veiculo.estacionamento %}<p>Local: Via {{ veiculo.estacionamento.via }} — Fila {{ veiculo.estacionamento.fila }}</p>{% endif %}
+{% endblock %}

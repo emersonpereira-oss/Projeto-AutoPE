@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Pagamentos</h2>
+<ul>
+  {% for p in pagamentos %}
+    <li>Pagamento {{ p.id }} — R${{ p.valor }} — {{ p.status }}</li>
+  {% empty %}<li>Nenhum pagamento.</li>{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Tentativas de Acesso</h2>
+<ul>
+  {% for t in tentativas %}
+    <li>{{ t.data_hora }} — {{ t.cliente.nome }} — {{ t.sucesso }}</li>
+  {% empty %}<li>Sem registros.</li>{% endfor %}
+</ul>
+{% endblock %}

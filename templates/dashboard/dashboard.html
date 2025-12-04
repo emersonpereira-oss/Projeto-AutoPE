@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Painel AutoPE</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+  <div class="card"><h3>Clientes</h3><p>Gerenciar clientes</p><a href="/clientes/">Ir</a></div>
+  <div class="card"><h3>Veículos</h3><p>Gerenciar veículos</p><a href="/veiculos/">Ir</a></div>
+  <div class="card"><h3>Locações</h3><p>Reservas</p><a href="/locacao/">Ir</a></div>
+  <div class="card"><h3>Pagamentos</h3><p>Financeiro</p><a href="/pagamentos/">Ir</a></div>
+  <div class="card"><h3>Tentativas</h3><p>Acessos</p><a href="/tentativas/">Ir</a></div>
+</div>
+{% endblock %}

@@ -2,9 +2,9 @@ from django.db import models
 from clientes.models import Cliente
 
 class TentativaAcesso(models.Model):
-    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE, related_name='tentativas')
     data_hora = models.DateTimeField(auto_now_add=True)
-    sucesso = models.BooleanField()
+    sucesso = models.BooleanField(default=False)
     motivo = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):

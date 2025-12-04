@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Cadastro</h2>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <label>Nome</label><br><input name="nome" required><br>
+  <label>CPF</label><br><input name="cpf" required><br>
+  <label>Email</label><br><input type="email" name="email" required><br>
+  <label>Telefone</label><br><input name="telefone"><br>
+  <label>Data Nasc</label><br><input type="date" name="data_nascimento"><br>
+  <label>Foto (face)</label><br><input type="file" name="foto"><br>
+  <label>Senha</label><br><input type="password" name="senha" required><br><br>
+  <button type="submit">Cadastrar</button>
+</form>
+{% endblock %}

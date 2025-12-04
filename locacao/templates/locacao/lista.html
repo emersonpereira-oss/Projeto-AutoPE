@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Locações</h2>
+<ul>
+  {% for l in locacoes %}
+    <li><a href="/locacao/{{ l.id }}/">Locação {{ l.id }}</a> — {{ l.cliente.nome }}</li>
+  {% empty %}<li>Nenhuma locação.</li>{% endfor %}
+</ul>
+{% endblock %}

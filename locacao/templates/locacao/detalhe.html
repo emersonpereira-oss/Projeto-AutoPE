@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Locação {{ locacao.id }}</h2>
+<p>Cliente: {{ locacao.cliente.nome }}</p>
+<p>Veículo: {{ locacao.veiculo }}</p>
+<p>Início: {{ locacao.data_inicio }}</p>
+<p>Prevista: {{ locacao.data_prevista }}</p>
+{% endblock %}
